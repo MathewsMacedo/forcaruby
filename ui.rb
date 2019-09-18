@@ -22,11 +22,18 @@ def quer_jogar
 	quero.upcase == "S"
 end
 
-def pede_um_chute(chutes,erros)
+
+def cabecalho_pede_um_chute (chutes,erros,mascara)
 
 	puts "\n\n\n\n\n"
+	puts "Palavra secreta: #{mascara}"
 	puts "Erros até agora: #{erros}"
 	puts "chutes até agora: #{chutes}"
+end
+
+
+
+def pede_um_chute
 	puts "Entre com uma letra ou uma palavra: "
 	chute = gets.strip
 	puts
