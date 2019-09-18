@@ -2,8 +2,8 @@
 Second Ruby application to learn and understand the language
 * Learn about class
 * Function 
-* code smell
-* good practice
+* Code smell
+* Good practice
 * Syntax
 
 ## Launch
