@@ -1,6 +1,6 @@
 ## Ruby Game
 Second Ruby application to learn and understand the language
-* Learn about class
+* Learning about class
 * Function 
 * Code smell
 * Good practice
