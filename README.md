@@ -4,6 +4,7 @@ Second Ruby application to learn and understand the language
 * Function 
 * Code smell
 * Good practice
+* Read txt files
 * Syntax
 
 ## Launch
