@@ -1,6 +1,32 @@
 
 require_relative 'ui'
 
+def escolhe_palavra_secreta
+	avisa_escolhendo_palavra
+	texto = File.read("dicionario.txt")
+	todas_as_palavras = texto.split "\n"
+	numero_escolhido = rand(todas_as_palavras.size)
+	palavra_secreta = todas_as_palavras[numero_escolhido].upcase
+	avisa_palavra_escolhida palavra_secreta
+	palavra_secreta
+end
+
+
+def escolhe_palavra_secreta_sem_consumir_muita_memoria
+	avisa_escolhendo_palavra
+	arquivo = File.new("dicionario.txt")
+	quantidade_de_palavra = arquivo.gets.to_i #Need to input number of line in line top, on the dicionario.txt
+	numero_escolhido = rand(quantidade_de_palavra.size)
+
+	for linha in 1..(numero_escolhido-1)
+		arquivo.gets
+	end
+	palavra_secreta = arquivo.gets.strip.upcase
+	avisa_palavra_escolhida palavra_secreta
+	palavra_secreta
+end
+
+
 def palavra_mascarada (chutes,palavra_secreta)
 
 	mascara = ""
