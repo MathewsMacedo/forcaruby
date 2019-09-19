@@ -1,6 +1,9 @@
 
 require_relative 'ui'
 
+require_relative 'rank'
+
+
 def escolhe_palavra_secreta
 	avisa_escolhendo_palavra
 	texto = File.read("dicionario.txt")
@@ -95,14 +98,20 @@ def joga(nome)
 	end
 
 	avisa_pontos_ate_agora pontos_ate_agora
+	pontos_ate_agora
 end
 
 
 def jogo_da_forca
 nome = da_boas_vindas
-
+pontos_totais = 0
+avisa_campeao_atual le_rank
 	loop do 
-		joga nome
+	pontos_totais += joga nome
+	avisa_pontos_totais pontos_totais
+	if le_rank[1].to_i < pontos_totais
+	salva_rank nome,pontos_totais
+	end
 		break if !quer_jogar
 	end
 
